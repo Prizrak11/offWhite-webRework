@@ -3,8 +3,46 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body
-        h1 Hola mundo
-        img(src="./static/alba-logo.png", alt="")
-    
+        title Off-White
+    body(syle="overflow-x=hidden")
+        .wrapper
+            nav.nav
+                .nav__brand
+                    img.nav__brand(src="./static/logo.jpg", alt="")
+                .nav__options
+                    a.nav__option(href="#") "menu"    
+            .nav__separation
+                    span 'logo'
+                    span 'home'
+            .product
+                aside.product__aside 
+                    span 'overview'
+                .product__overview
+                    img.product__overview__image(src="", alt="" id="productImage")
+                    input(type="range" min="1" max="36" step="1" value="1" id="slider")   
+                aside.product__aside 
+                    span 'name'
+                .product__title
+                    h1 Nike Air Force 1 Off-White
+                aside.product__aside 
+                    span 'about'
+                .product__description
+                    .product__description__text
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit velit quo eius totam hic, eligendi asperiores impedit voluptate nam, excepturi iste. Consequuntur repudiandae unde ullam totam dolores repellendus id dicta!
+                    aside.product__description__aside
+                        span 'size'
+                        span 'price'
+                    .product__description__size
+                        input(type="radio" name="size" value="S")
+                        label(for="") S
+                        input(type="radio" name="size" value="M")
+                        label(for="") M
+                        input(type="radio" name="size" value="L")
+                        label(for="") L
+                        input(type="radio" name="size" value="XL")
+                        label(for="") XL
+                    .product__description__price
+                        p $ 218.06
+                    
+                    
+                    

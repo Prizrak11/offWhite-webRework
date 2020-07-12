@@ -1,4 +1,10 @@
-body{
-    background-color: red;
-    color: #fff;
+@import "/src/sass/_variables.scss";
+@import "/src/sass/mixins";
+@import "/src/sass/_config.scss";
+@import "/src/sass/_nav.scss";
+@import "/src/sass/_product.scss";
+.wrapper {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }

@@ -1,0 +1,29 @@
+.nav {
+    grid-column: 1 / 2 span;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1em 0.3em 0.5em 0.3em;
+    background-color: $color-main;
+    &__brand {
+        height: 105%;
+        margin-left: 0.2em;
+    }
+    &__options {
+        align-self: flex-end;
+        margin-right: 0.2em;
+    }
+    &__option {
+        font-family: $font-basic;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white;
+    }
+}
+.nav__separation {
+    margin-left: 0.7rem;
+    margin-top: 0.2em;
+    grid-column: 1 / 2 span;
+    @include deco-info();
+}

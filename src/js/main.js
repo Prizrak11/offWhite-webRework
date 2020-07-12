@@ -1,7 +1,8 @@
-//Sass
-require('../sass/main.scss')
+import '../sass/main.scss'
 //Images
-require('../static/alba-logo.png')
+import '../static/logo.jpg'
 //Babel
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+//JavaScript
+import './360'

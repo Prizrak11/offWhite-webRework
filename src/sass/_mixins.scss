@@ -1,0 +1,45 @@
+//Decoration info
+@mixin deco-info($direction: "x") {
+    font-size: 8px;
+    display: flex;
+    text-transform: uppercase;
+    span {
+        background-color: white;
+        color: $color-extra;
+    }
+    &::before {
+        content: "";
+        z-index: -1;
+        background-color: $color-extra;
+        position: absolute;
+    }
+    @if $direction == "x" {
+        justify-content: space-between;
+        margin-left: 0.7rem;
+        span {
+            padding: 0 0.2em;
+        }
+        &:nth-last-child(2) {
+            margin-right: 1.5rem;
+        }
+        &::before {
+            margin-top: 0.5em;
+            height: 1px;
+            left: 1em;
+            width: 97%;
+        }
+    } @else if $direction == "y" {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        align-items: center;
+        justify-content: center;
+        span {
+            padding: 0.5em 0;
+        }
+        &::before {
+            transform: rotate(180deg);
+            height: 100%;
+            width: 1px;
+        }
+    }
+}
