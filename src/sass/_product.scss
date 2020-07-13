@@ -5,13 +5,20 @@
     grid-template-columns: 3% 1fr;
     &__aside {
         @include deco-info("y");
+        &.about {
+            span {
+                margin-bottom: -10em;
+            }
+        }
+    }
+    &__market {
+        @include deco-info("title");
     }
     &__overview {
         input[type="range"] {
-            width: 80%;
+            width: 90%;
             margin-bottom: 1em;
-            margin: 0 auto;
-            margin-left: 2em;
+            margin-left: 1.5em;
             &:focus {
                 outline: none;
             }
@@ -22,21 +29,21 @@
             }
             &::-webkit-slider-thumb {
                 background-color: white;
-                width: 7px;
-                height: 7px;
-                border: 1px solid $color-main;
+                width: 8px;
+                height: 8px;
+                border: 1px solid $color-medium;
                 border-radius: 50%;
                 margin-top: -0.2em;
             }
             &::-webkit-slider-runnable-track {
-                background-color: $color-main;
+                background-color: $color-medium;
                 height: 2px;
             }
             &:focus::-webkit-slider-runnable-track {
                 outline: none;
             }
             &::-ms-fill-upper {
-                background-color: black;
+                background-color: $color-medium;
             }
         }
         &__image {
@@ -44,7 +51,7 @@
         }
     }
     &__title {
-        padding: 1em 0;
+        padding: 1em 0.5em;
         h1 {
             font-family: $font-title;
             font-size: 30px;
@@ -56,23 +63,44 @@
         grid-template-columns: 1fr 1fr;
         &__text {
             grid-column: 1 / 2 span;
-            padding: 0 1.5em 1.5em 1.5em;
+            padding: 0 2.5em 1.5em 2.5em;
+            text-align: center;
+            font-size: 1em;
         }
         &__aside {
             grid-column: 1 / 2 span;
             @include deco-info();
-            margin: 0 9em;
+            justify-content: space-around;
         }
         &__price,
         &__size {
             justify-self: center;
             align-self: initial;
-            padding-top: 1em;
+            padding: 0.5em 0;
         }
         &__size {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 0.5em;
+            align-content: center;
+            input[type="radio"] {
+                opacity: 0;
+                position: fixed;
+                width: 0;
+            }
+            label {
+                text-align: center;
+                display: block;
+                padding: 0.5em;
+                font-size: 12px;
+                color: $color-medium;
+                border: 1px solid $color-medium;
+                transition: all ease-in-out 0.3s;
+            }
+            label:hover {
+                background-color: $color-main;
+                border-color: $color-medium;
+            }
         }
         &__price {
             display: flex;
@@ -80,6 +108,27 @@
             font-size: 25px;
             font-family: $font-title;
             font-style: italic;
+        }
+    }
+    &__buy {
+        justify-self: center;
+        align-self: center;
+        padding: 1em 0;
+        button {
+            background: $color-main;
+            color: $color-extra;
+            border: none;
+            padding: 1em 5em;
+            font-size: 15px;
+            border: 1px solid transparent;
+            transition: all ease-in-out 0.3s;
+            text-transform: uppercase;
+            &:focus {
+                outline: none;
+                border: 1px solid $color-main;
+                background-color: white;
+                color: $color-main;
+            }
         }
     }
 }

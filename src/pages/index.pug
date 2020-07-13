@@ -3,6 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css")
         title Off-White
     body(syle="overflow-x=hidden")
         .wrapper
@@ -11,10 +12,10 @@ html(lang="en")
                     img.nav__brand(src="./static/logo.jpg", alt="")
                 .nav__options
                     a.nav__option(href="#") "menu"    
-            .nav__separation
-                    span 'logo'
-                    span 'home'
             .product
+                //aside.product__aside
+                .product__market
+                    span "Product"
                 aside.product__aside 
                     span 'overview'
                 .product__overview
@@ -24,11 +25,11 @@ html(lang="en")
                     span 'name'
                 .product__title
                     h1 Nike Air Force 1 Off-White
-                aside.product__aside 
+                aside.product__aside(class="about") 
                     span 'about'
                 .product__description
                     .product__description__text
-                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit velit quo eius totam hic, eligendi asperiores impedit voluptate nam, excepturi iste. Consequuntur repudiandae unde ullam totam dolores repellendus id dicta!
+                        p The force is within you, as Nike uses their very own and release the Air Force 1 Low Off-White Black White. This AF1 comes with a black upper, white Nike “Swoosh”, black midsole, and a black sole. These sneakers were released December 2018 and retailed for $170
                     aside.product__description__aside
                         span 'size'
                         span 'price'
@@ -42,7 +43,57 @@ html(lang="en")
                         input(type="radio" name="size" value="XL")
                         label(for="") XL
                     .product__description__price
-                        p $ 218.06
+                        p $ 1,040
+                aside.product__aside
+                    span 'buy'
+                .product__buy
+                    button "to cart"
+            .review
+                .review__title
+                    span "Review"
+                aside.review__aside
+                    span 'critique'
+                .review__comments
+                    .review__comments__comment
+                        aside.review__comments__comment__aside
+                            span 'img'
+                            span 'opinion'
+                        .review__comments__comment__img
+                            img(src="https://picsum.photos/300", alt="")
+                        .review__comments__comment__text
+                            h3 Comment title
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
+                    .review__comments__comment
+                        aside.review__comments__comment__aside
+                            span 'img'
+                            span 'opinion'
+                        .review__comments__comment__img
+                            img(src="https://picsum.photos/300", alt="")
+                        .review__comments__comment__text
+                            h3 Comment title
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
+                    .review__comments__comment
+                        aside.review__comments__comment__aside
+                            span 'img'
+                            span 'opinion'
+                        .review__comments__comment__img
+                            img(src="https://picsum.photos/300", alt="")
+                        .review__comments__comment__text
+                            h3 Comment title
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
+                    .review__comments__comment
+                        aside.review__comments__comment__aside
+                            span 'img'
+                            span 'opinion'
+                        .review__comments__comment__img
+                            img(src="https://picsum.photos/300", alt="")
+                        .review__comments__comment__text
+                            h3 Comment title
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
+                    
+                
+                
+            
                     
                     
                     
