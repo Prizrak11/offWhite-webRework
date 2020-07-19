@@ -1,11 +1,13 @@
-@import "/src/sass/_variables.scss";
+@import "/src/sass/variables";
 @import "/src/sass/mixins";
-@import "/src/sass/_config.scss";
-@import "/src/sass/_nav.scss";
-@import "/src/sass/_product.scss";
-@import "/src/sass/review";
+@import "/src/sass/config";
+@import "/src/sass/nav";
+@import "/src/sass/product";
+@import "/src/sass/other";
+@import "/src/sass/footer";
 .wrapper {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    margin-top: 4em;
 }

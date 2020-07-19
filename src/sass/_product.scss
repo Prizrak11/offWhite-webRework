@@ -10,6 +10,11 @@
                 margin-bottom: -10em;
             }
         }
+        &.buy {
+            span {
+                margin-bottom: -5em;
+            }
+        }
     }
     &__market {
         @include deco-info("title");
@@ -51,19 +56,14 @@
         }
     }
     &__title {
-        padding: 1em 0.5em;
-        h1 {
-            font-family: $font-title;
-            font-size: 30px;
-            text-align: center;
-        }
+        @include deco-info("title");
     }
     &__description {
         display: grid;
         grid-template-columns: 1fr 1fr;
         &__text {
             grid-column: 1 / 2 span;
-            padding: 0 2.5em 1.5em 2.5em;
+            padding: 2.5em;
             text-align: center;
             font-size: 1em;
         }
@@ -90,13 +90,15 @@
             }
             label {
                 text-align: center;
+                cursor: pointer;
                 display: block;
-                padding: 0.5em;
-                font-size: 12px;
+                padding: 0.4em;
+                font-size: 15px;
                 color: $color-medium;
                 border: 1px solid $color-medium;
                 transition: all ease-in-out 0.3s;
             }
+            label:target,
             label:hover {
                 background-color: $color-main;
                 border-color: $color-medium;
@@ -104,18 +106,23 @@
         }
         &__price {
             display: flex;
-            align-content: center;
             font-size: 25px;
             font-family: $font-title;
             font-style: italic;
+            p {
+                align-self: center;
+            }
         }
     }
     &__buy {
         justify-self: center;
         align-self: center;
         padding: 1em 0;
+        display: flex;
+        flex-direction: column;
         button {
             background: $color-main;
+            cursor: pointer;
             color: $color-extra;
             border: none;
             padding: 1em 5em;
@@ -128,6 +135,16 @@
                 border: 1px solid $color-main;
                 background-color: white;
                 color: $color-main;
+            }
+        }
+        span {
+            text-align: center;
+            padding: 0.7em 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
             }
         }
     }

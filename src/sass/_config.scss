@@ -14,12 +14,12 @@ li,
 ol,
 img,
 div {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-basic;
     text-decoration: none;
     color: #000;
 }
 body {
     overflow-x: hidden;
     font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $font-basic;
 }

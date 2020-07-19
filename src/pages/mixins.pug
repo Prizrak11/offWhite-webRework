@@ -1,0 +1,9 @@
+mixin size (value)
+  input(type="radio" name="size" value=`${value}`)
+  label(for="")=`${value}`
+  
+mixin product (title,img,price)
+  .other__products__product
+    img.other__products__product__img(src=`${img}`, alt="")
+    h3.other__products__product__title=`${title}`
+    p.other__products__product__price=`$ ${price}`

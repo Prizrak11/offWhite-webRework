@@ -1,3 +1,4 @@
+include ./mixins.pug
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -6,25 +7,20 @@ html(lang="en")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css")
         title Off-White
     body(syle="overflow-x=hidden")
-        .wrapper
-            nav.nav
+        nav.nav
                 .nav__brand
                     img.nav__brand(src="./static/logo.jpg", alt="")
                 .nav__options
-                    a.nav__option(href="#") "menu"    
+                    a.nav__option(href="#") "menu"
+        .wrapper    
             .product
-                //aside.product__aside
-                .product__market
-                    span "Product"
+                .product__title
+                    span "Nike Air Force 1 Off-White"
                 aside.product__aside 
                     span 'overview'
                 .product__overview
                     img.product__overview__image(src="", alt="" id="productImage")
                     input(type="range" min="1" max="36" step="1" value="1" id="slider")   
-                aside.product__aside 
-                    span 'name'
-                .product__title
-                    h1 Nike Air Force 1 Off-White
                 aside.product__aside(class="about") 
                     span 'about'
                 .product__description
@@ -34,66 +30,45 @@ html(lang="en")
                         span 'size'
                         span 'price'
                     .product__description__size
-                        input(type="radio" name="size" value="S")
-                        label(for="") S
-                        input(type="radio" name="size" value="M")
-                        label(for="") M
-                        input(type="radio" name="size" value="L")
-                        label(for="") L
-                        input(type="radio" name="size" value="XL")
-                        label(for="") XL
+                        +size(37)
+                        +size(38)
+                        +size(39)
+                        +size(40)
+                        +size(41)
+                        +size(42)
+                        +size(43)
+                        +size(44)
                     .product__description__price
                         p $ 1,040
-                aside.product__aside
+                aside.product__aside.buy
                     span 'buy'
                 .product__buy
-                    button "to cart"
-            .review
-                .review__title
-                    span "Review"
-                aside.review__aside
-                    span 'critique'
-                .review__comments
-                    .review__comments__comment
-                        aside.review__comments__comment__aside
-                            span 'img'
-                            span 'opinion'
-                        .review__comments__comment__img
-                            img(src="https://picsum.photos/300", alt="")
-                        .review__comments__comment__text
-                            h3 Comment title
-                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
-                    .review__comments__comment
-                        aside.review__comments__comment__aside
-                            span 'img'
-                            span 'opinion'
-                        .review__comments__comment__img
-                            img(src="https://picsum.photos/300", alt="")
-                        .review__comments__comment__text
-                            h3 Comment title
-                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
-                    .review__comments__comment
-                        aside.review__comments__comment__aside
-                            span 'img'
-                            span 'opinion'
-                        .review__comments__comment__img
-                            img(src="https://picsum.photos/300", alt="")
-                        .review__comments__comment__text
-                            h3 Comment title
-                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
-                    .review__comments__comment
-                        aside.review__comments__comment__aside
-                            span 'img'
-                            span 'opinion'
-                        .review__comments__comment__img
-                            img(src="https://picsum.photos/300", alt="")
-                        .review__comments__comment__text
-                            h3 Comment title
-                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fuga ipsa quo consectetur pariatur ut laborum nam, sint libero ad!
-                    
-                
-                
-            
-                    
-                    
-                    
+                    button "add to bag"
+                    span "add to wishlist"
+            .other
+                aside.other__aside
+                    span 
+                span.other__title 
+                    span 'recently viewed'
+                aside.other__aside
+                    span 'products'
+                .other__products
+                    +product('Nike pasion','https://stockx-360.imgix.net/Nike-Air-Force-1-Low-Off-White-Black-White/Images/Nike-Air-Force-1-Low-Off-White-Black-White/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1546755764&w=1000`', '960')
+                    +product('Nike pasion','https://stockx-360.imgix.net/Nike-Air-Force-1-Low-Off-White-Black-White/Images/Nike-Air-Force-1-Low-Off-White-Black-White/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1546755764&w=1000`', '1.080') 
+                    +product('Nike pasion','https://stockx-360.imgix.net/Nike-Air-Force-1-Low-Off-White-Black-White/Images/Nike-Air-Force-1-Low-Off-White-Black-White/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1546755764&w=1000`', '380') 
+            .footer
+                .footer__title
+                    span -
+                aside.product__aside 
+                    span 'logo'
+                .footer__main
+                    .footer__main__brand
+                        span Off-White
+                    .footer__main__social
+                        a.footer__main__social(href="#") <i class="fab fa-instagram-square"></i>
+                        a.footer__main__social(href="#") <i class="fab fa-twitter-square"></i>
+                        a.footer__main__social(href="#") <i class="fab fa-facebook-square"></i>
+                aside.product__aside 
+                    span 'info'
+                .footer__info
+                    p Company subject to management and coordination by New Guards Group Holding S.p.A, pursuant to art. 2497 and following of the Italian civil code. VAT ID: IT08436950961 © 2020 Off-White™. All rights reserved.

@@ -1,0 +1,31 @@
+.footer {
+    grid-column: 1 / 2 span;
+    display: grid;
+    grid-template-columns: 3% 1fr;
+    &__aside {
+        @include deco-info("y");
+    }
+    &__title {
+        @include deco-info("title");
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        &__brand {
+            color: $color-main;
+            margin-left: 0.2em;
+            font-size: 30px;
+            padding: 0 0.2em;
+            align-self: center;
+        }
+        &__social {
+            justify-self: end;
+            align-self: center;
+            margin-right: 0.2em;
+            font-size: 1.2em;
+        }
+    }
+    &__info {
+        padding: 1em;
+    }
+}
